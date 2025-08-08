@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ucapan Ulang Tahun Biru</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="flex items-center justify-center h-screen bg-blue-100 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848c?q=80&w=1080&auto=format&fit=crop');">
+
+  <div id="kartu" class="bg-white bg-opacity-90 px-10 py-8 rounded-xl shadow-xl text-center animate__animated animate__fadeInDown m-8 w-80 border-4 border-blue-300">
+    <h1 class="text-3xl font-semibold text-600">🎉Happy Birthday🎉</h1>
+    <h2 class="text-4xl mt-2 font-bold text-blue-500 animate__animated animate__pulse animate__infinite">anisahh</h2>
+    <button onclick="ubahKartu()" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition ease-In w-full animate__animated animate__pulse animate__delay1s animate__tada">
+      Klik disini!
+    </button>
+  </div>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script>
+    // Confetti saat halaman dibuka
+    confetti({ 
+      particleCount: 150,
+      spread: 100,
+      origin: { y: 0.6 },
+      colors: ['#3b82f6', '#60a5fa', '#93c5fd']
+    });
+
+    function ubahKartu() {
+      const kartu = document.getElementById("kartu");
+      kartu.innerHTML = `
+        <h1 class="text-3xl font-bold text-blue-700 animate__animated animate__zoomIn"></h1>
+        <p class="mt-4 text-gray-800 animate__animated animate__fadeIn">Semoga hari spesialmu penuh kebahagiaan, cinta, dan harapan baru. Teruslah bersinar dan capai semua impianmu!Semoga tahun ini menjadi awal dari petualangan luar biasa yang penuh berkah dan kebahagiaan. Tetap semangat dan terus bersinar! HAPPY LEGAL DAYYY</p>
+        <h2 class="mt-6 text-blue-600 animate__animated animate__fadeInUp">- Dari: Dipia -</h2>
+        <button onclick="location.reload()" class="mt-6 bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900 transition animate__animated animate__tada">
+          Ulangi
+        </button>
+      `;
+
+      // Confetti ulang saat klik
+      confetti({
+        particleCount: 100,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#3b82f6', '#60a5fa', '#93c5fd']
+      });
+    }
+  </script>
+
+</body>
+</html>
